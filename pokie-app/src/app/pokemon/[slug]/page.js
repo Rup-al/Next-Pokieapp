@@ -39,27 +39,25 @@ const PokemonDetailPage = () => {
       <Card className="border rounded-lg flex flex-col items-center" style={{ maxWidth: 400, margin: '0 auto' }}>
         <CardMedia
           component="img"
-         
-          style={{ backgroundColor:'darkcyan', height:'300px'}}
+          style={{ backgroundColor: '#60E2C9', height: '300px' }}
           image={pokemon.sprites.front_default}
           alt={pokemon.name}
-         
         />
-        <CardContent>
+        <CardContent style={{ backgroundColor: '#FDC666' }}>
           <Typography variant="h6" component="div" align="left">
-          <span style={{ fontWeight:'bold'}}>Name:</span> {pokemon.name}
+            <span style={{ fontWeight: 'bold' }}>Name:</span> {pokemon.name}
           </Typography>
 
           <Typography variant="h6" component="div" align="left">
-            <span style={{ fontWeight:'bold'}}>Types:</span> {pokemon.types.map((type) => type.type.name).join(', ')}
+            <span style={{ fontWeight: 'bold' }}>Types:</span> {pokemon.types.map((type) => type.type.name).join(', ')}
           </Typography>
 
           <Typography variant="h6" component="div" align="left">
-          <span style={{ fontWeight:'bold'}}>Abilities:</span> {pokemon.abilities.map((ability) => ability.ability.name).join(', ')}
+            <span style={{ fontWeight: 'bold' }}>Abilities:</span> {pokemon.abilities.map((ability) => ability.ability.name).join(', ')}
           </Typography>
 
           <Typography variant="h6" component="div" align="left">
-           <span style={{ fontWeight:'bold'}}>Moves:</span> {pokemon.moves.slice(0, 5).map((move) => move.move.name).join(', ')}
+            <span style={{ fontWeight: 'bold' }}>Moves:</span> {pokemon.moves.slice(0, 5).map((move) => move.move.name).join(', ')}
           </Typography>
         </CardContent>
       </Card>
